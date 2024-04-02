@@ -15,21 +15,23 @@ public class Product {
     private int quantity;
     private int price;
     @ManyToOne
-    private AppUser sellerId;
-    private String rating;
+    private AppUser seller;
+
+
+    private Double rating;
     private String description;
 
     public Product(){
 
     }
 
-    public Product(UUID id, String name, String category, int quantity, int price, AppUser sellerId, String rating, String description) {
+    public Product(UUID id, String name, String category, int quantity, int price, AppUser seller, Double rating, String description) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.quantity = quantity;
         this.price = price;
-        this.sellerId = sellerId;
+        this.seller = seller;
         this.rating = rating;
         this.description = description;
     }
@@ -74,19 +76,19 @@ public class Product {
         this.price = price;
     }
 
-    public AppUser getSellerId() {
-        return sellerId;
+    public AppUser getSeller() {
+        return seller;
     }
 
-    public void setSellerId(AppUser sellerId) {
-        this.sellerId = sellerId;
+    public void setSeller(AppUser seller) {
+        this.seller = seller;
     }
 
-    public String getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 
