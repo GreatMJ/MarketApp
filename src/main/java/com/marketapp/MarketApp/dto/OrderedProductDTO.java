@@ -1,0 +1,17 @@
+package com.marketapp.MarketApp.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.UUID;
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class OrderedProductDTO {
+
+    private UUID id;
+    private int quantity;
+}

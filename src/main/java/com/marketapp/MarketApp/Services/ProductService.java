@@ -41,10 +41,13 @@ public class ProductService {
 
     }
 
+    // get product by Id
+    public Product getProductById(UUID prductId){
+        return productRepository.findById(prductId).orElse(null);
+    }
+
 
     // methods to get products either by category or productName
-
-
     // by both category and productName
     public List<ProductDetailsDTO> getProductsByCategoryAndProductName(String category,String productName){
         List<Product> productList=productRepository.getProductsByCategoryAndProductName(category,productName);
